@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 # CSV 파일 불러오기
-df = pd.read_csv("seoul_card_sales.csv")
+df = pd.read_csv("seoul_card_sales.csv", encoding="cp949")
 
 # Streamlit 앱 제목
 st.title("서울 소비 트렌드 분석 대시보드")

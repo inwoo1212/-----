@@ -23,3 +23,5 @@ filtered = df[df["지역"] == selected_area]
 # 월별 소비 금액 그래프 출력
 fig = px.line(filtered, x="연월", y="카드사용금액", title=f"{selected_area} 월별 소비 금액 추이")
 st.plotly_chart(fig)
+# 연월 열을 문자열로 바꾸기 (예: 20242 → 2024-02)
+df["연월"] = df["연월"].astype(str).str[:4] + "-" + df["연월"].astype(str).str[4:]
